@@ -1,0 +1,6 @@
+hidden
+node_modules
+dist
+scripts/transform.ts
+*.tgz
+*.tsbuildinfo

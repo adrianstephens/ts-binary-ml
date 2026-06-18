@@ -1,0 +1,35 @@
+{
+	"name": "@isopodlabs/binary_libs",
+	"description": "A package for reading various ml file formats with TypeScript.",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/adrianstephens/ts-binary-ml.git"
+	},
+	"exports": {
+		".": "./dist/index.js"
+	},
+	"files": [
+		"dist/**/*.{js,d.ts}",
+		"README.md"
+	],
+	"scripts": {
+		"build": "../node_modules/.bin/tsc",
+		"watch": "tsc --watch -p ./",
+		"lint": "eslint \"src/**/*.ts\"",
+		"link": "npm link @isopodlabs/binary",
+		"update": "npm install @isopodlabs/binary@latest"
+	},
+	"keywords": [
+		"binary",
+		"typescript",
+		"data",
+		"read",
+		"write"
+	],
+	"author": "Adrian Stephens",
+	"license": "MIT",
+	"version": "0.0.0",
+	"dependencies": {
+		"@isopodlabs/binary": "^2.0.1"
+	}
+}

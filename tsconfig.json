@@ -1,0 +1,33 @@
+{
+	"compilerOptions": {
+		"composite": true,
+		"target": "ES2022",
+		"module": "commonjs",
+		"strict": true,
+		"declaration": true,
+		"stripInternal": true,
+		"esModuleInterop": true,
+		"skipLibCheck": true,
+		"forceConsistentCasingInFileNames": true,
+		"sourceMap": true,
+		"outDir": "./dist",
+		"rootDir": "src",
+		"types": ["node"],
+		"plugins": [
+			{
+				"transform": "./node_modules/@isopodlabs/binary/scripts/transform.ts",
+				"afterDeclarations": true
+			}
+		]
+	},
+	"include": [
+		"src/**/*.ts"
+	],
+	"exclude": [
+		"node_modules",
+		"**/*.spec.ts",
+	],
+	"references": [
+		{ "path": "../binary" }
+	]
+}
