@@ -25,10 +25,11 @@ const fn = '/Volumes/DevSSD/sha256-f5ee307a2982106a6eb82b62b2c00b575c9072145a759
 	const gg = await gguf.readGguf(stream);
 
 	const tensor = gg.tensors.at(-1)!;//[1];
-	for (let i = 0; i < tensor.parameterCount(); i++) {
-		const v = await tensor.lookup(i);
-		console.log(i, v);
-	}
-	const f = await gg.tensors[0].lookup(0);
+	console.log(tensor.name, tensor.typeName(), tensor.shape, 'first values:', await tensor.read(0, Math.min(tensor.parameterCount(), 16)));
+
+	const types: Record<string, number> = {};
+	for (const t of gg.tensors)
+		types[t.typeName()] = (types[t.typeName()] ?? 0) + 1;
+	console.log(types);
 	console.log(gg);
 })();

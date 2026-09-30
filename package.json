@@ -1,5 +1,5 @@
 {
-	"name": "@isopodlabs/binary_libs",
+	"name": "@isopodlabs/binary_ml",
 	"description": "A package for reading various ml file formats with TypeScript.",
 	"repository": {
 		"type": "git",
